@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Mumo Admin Dash</title>
+    <!-- plugins:css -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/mdi/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css" />
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- End layout styles -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/versie3/MuMoV3_symbol.png"
+    />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- Topbar -->
+      <nav
+        class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
+      ><!-- Mumo logo -->
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
+        >
+        <!-- Mumo logo max -->
+          <a class="navbar-brand brand-logo" href="index.html"
+            ><img
+              class="img-fluid"
+              height="auto"
+              src="assets/images/logo/versie3/MuMoV3_long.png"
+              alt="logo" class="img-fluid"
+          /></a>
+          <!-- MuMo logo minimized -->
+          <a class="navbar-brand brand-logo-mini" href="index.html"
+            ><img src="assets/images/logo/versie3/MuMoV3.png" alt="logo" class="img-fluid "
+          /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <!-- Minimize Sidebar button -->
+          <button
+            class="navbar-toggler navbar-toggler align-self-center"
+            type="button"
+            data-toggle="minimize"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <!-- Search bar -->
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input
+                  type="text"
+                  class="form-control bg-transparent border-2 rounded-pill"
+                  placeholder="Search"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- Topbar Right -->
+          <ul class="navbar-nav navbar-nav-right">
+            <!-- Profile link/name / collapse Sign out -->
+            <li class="nav-item nav-profile dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="profileDropdown"
+                href="#"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div class="nav-profile-img">
+                  <img src="assets/images/logo/modemuseum.jpg" alt="image" class="img-fluid img-thumbnail"/>
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">Mode Museum</p>
+                </div>
+              </a>
+              <div
+                class="dropdown-menu navbar-dropdown"
+                aria-labelledby="profileDropdown"
+              >
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-logout mr-2 text-danger"></i> Signout
+                </a>
+              </div>
+            </li>
+            <!-- Notification collapse -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link count-indicator dropdown-toggle"
+                id="notificationDropdown"
+                href="#"
+                data-toggle="dropdown"
+              >
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count-symbol bg-danger"></span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="notificationDropdown"
+              >
+                <h6 class="p-3 mb-0">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-danger">
+                      <i class="mdi mdi-alert-circle"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="preview-item-content d-flex align-items-start flex-column justify-content-center"
+                  >
+                    <h6 class="preview-subject mb-1 font-weight-bold">
+                      Sensor_Device_2
+                    </h6>
+                    <p class="text-gray ellipsis mb-0">
+                      Humidity is to high
+                    </p>
+                    <p class="text-gray ellipsis mb-0 font-italic">
+                      29/08/2020 - 10:30
+                    </p>
+                  </div>
+                </a>
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-battery-charging-20"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="preview-item-content d-flex align-items-start flex-column justify-content-center"
+                  >
+                    <h6 class="preview-subject font-weight-bolt mb-1">
+                      Sensor_Device_1
+                    </h6>
+                    <p class="text-gray ellipsis mb-0">Low battery level</p>
+                    <p class="text-gray ellipsis mb-0 font-italic">
+                      26/08/2020 - 11:05
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <svg
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                        class="bi bi-bug"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6H4a3.99 3.99 0 0 1 1.333-2.982A3.983 3.983 0 0 1 8 2c1.025 0 1.959.385 2.666 1.018A3.989 3.989 0 0 1 12 6z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="preview-item-content d-flex align-items-start flex-column justify-content-center"
+                  >
+                    <h6 class="preview-subject font-weight-bolt mb-1">
+                      Katoen natie - H2
+                    </h6>
+                    <p class="text-gray ellipsis mb-0">Mot detection alarm</p>
+                    <p class="text-gray ellipsis mb-0 font-italic">
+                      22/08/2020 - 15:35
+                    </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+              </div>
+            </li>
+            <!-- Full screen button -->
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- Main -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- Left Sidebar -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <!-- Profile link -->
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img
+                    src="assets/images/logo/modemuseum.jpg"
+                    alt="profile"
+                    class="img-fluid img-thumbnail"
+                    
+                  />
+                  <span class="login-status online"></span>
+                  <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2">ModeMuseum</span>
+                </div>
+                <i
+                  class="mdi mdi-bookmark-check text-success nav-profile-badge"
+                ></i>
+              </a>
+            </li>
+            <!-- Dashboard page link -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <!-- Groups page link -->
+            <li class="nav-item">
+              <a class="nav-link" href="pages/groups.html">
+                <span class="menu-title">Groups</span>
+                <i class="mdi mdi-checkbox-multiple-blank menu-icon"></i>
+              </a>
+            </li>
+            <!-- Sensors page link -->
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sensors.html">
+                <span class="menu-title">Sensors</span>
+                <i class="mdi mdi-speedometer menu-icon"></i>
+              </a>
+            </li>
+            <!-- Bugg page link -->
+            <li class="nav-item">
+              <a class="nav-link" href="pages/bugg_detection.html">
+                <span class="menu-title">Bugg detection</span>
+                <i class="menu-icon">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bug-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M4.978.855a.5.5 0 1 0-.956.29l.41 1.352A4.985 4.985 0 0 0 3 6h10a4.985 4.985 0 0 0-1.432-3.503l.41-1.352a.5.5 0 1 0-.956-.29l-.291.956A4.978 4.978 0 0 0 8 1a4.979 4.979 0 0 0-2.731.811l-.29-.956zM13 6v1H8.5v8.975A5 5 0 0 0 13 11h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 1 0 1 0v-.5a1.5 1.5 0 0 0-1.5-1.5H13V9h1.5a.5.5 0 0 0 0-1H13V7h.5A1.5 1.5 0 0 0 15 5.5V5a.5.5 0 0 0-1 0v.5a.5.5 0 0 1-.5.5H13zm-5.5 9.975V7H3V6h-.5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 0-1 0v.5A1.5 1.5 0 0 0 2.5 7H3v1H1.5a.5.5 0 0 0 0 1H3v1h-.5A1.5 1.5 0 0 0 1 11.5v.5a.5.5 0 1 0 1 0v-.5a.5.5 0 0 1 .5-.5H3a5 5 0 0 0 4.5 4.975z" />
+                  </svg>
+                </i>
+              </a>
+            </li>
+            <!-- Settings-collapse -->
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Settings</span>
+                <i class="menu-arrow"></i>
+                <i class="menu-icon">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z" />
+                  </svg>
+                </i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <!-- Settings-Threshold page -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/settings_threshold.html">Threshold</a>
+                  </li>
+                  <!-- Settings-profile page -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/settings_profile.html">Profile</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            
+            <li class="nav-item sidebar-actions">
+              <span class="nav-link">
+                <div class="border-bottom align-bottom">
+                  <h6 class="font-weight-normal text-left">Actions</h6>
+                </div>
+              </span>
+            </li>
+            <!-- Quick action buttons -->
+            <li class="nav-item sidebar-actions">
+              <span class="nav-link">
+                <button class="btn btn-block btn-auto btn-gradient-info  ">
+                  + Add Sensor device
+                </button>
+          </ul>
+        </nav>
+        <!-- Centeral panel -->
+        <div class="main-panel">
+
+          <div class="content-wrapper">
+            <!-- Title / date picker (ToDo!!) -->
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="page-header">
+                  <h3 class="page-title">
+                    <span class="page-title-icon bg-gradient-info text-white mr-2">
+                      <i class="mdi mdi-home"></i>
+                    </span>
+                    Dashboard
+                  </h3>
+                </div>
+              </div>  
+              <div class="col-sm-4">
+                <h4>
+                  <span class=title-icon ">
+                    <i class="mdi mdi-calendar"></i>
+                  </span>
+                  Date:
+                </h4>
+                 
+              </div>
+            </div>
+            <!-- Mumo Dashboard table -->
+            <div class="row">
+              <div class="col-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">Dashboard</h2>
+                    <p class="font-italic" id="lastUpdateDate">last update: 29/08/2020 - 11:30</p>
+                    <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="font-weight-bold">#</th>
+                          <th scope="col" >
+                            <h4>Name</h4>
+                          </th>
+                          <th scope="col">
+                            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-droplet-fill" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z" />
+                            </svg><span class="font-weight-light">%</span>
+                          </th>
+                          <th scope="col">
+                            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-sun" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" />
+                              <path fill-rule="evenodd"
+                                d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                            </svg><span class="font-weight-light"> Im</span>
+                          </th>
+                          <th scope="col">
+                            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-thermometer-half" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M6 2a2 2 0 1 1 4 0v7.627a3.5 3.5 0 1 1-4 0V2zm2-1a1 1 0 0 0-1 1v7.901a.5.5 0 0 1-.25.433A2.499 2.499 0 0 0 8 15a2.5 2.5 0 0 0 1.25-4.666.5.5 0 0 1-.25-.433V2a1 1 0 0 0-1-1z" />
+                              <path d="M8.25 2a.25.25 0 0 0-.5 0v9.02a1.514 1.514 0 0 1 .5 0V2z" />
+                              <path d="M9.5 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                            </svg><span class="font-weight-light">°C</span>
+                          </th>
+                          <th scope="col">
+                            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-battery-charging" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
+                              <path fill-rule="evenodd"
+                                d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z" />
+                              <path fill-rule="evenodd"
+                                d="M6.332 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2.072l.307-1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h3.391l.941-1zM4.45 6H2v4h1.313a1.5 1.5 0 0 1-.405-2.361L4.45 6zm.976 5l-.308 1H6.96l.21-.224h.001l.73-.776H6.53l-.085.09.028-.09H5.426zm1.354-1H5.733l.257-.833H4a.5.5 0 0 1-.364-.843l.793-.843L5.823 6h1.373L5.157 8.167h1.51a.5.5 0 0 1 .478.647L6.78 10zm.69 0h1.374l1.394-1.482.793-.842a.5.5 0 0 0-.364-.843h-1.99L8.933 6H7.887l-.166.54-.199.646A.5.5 0 0 0 8 7.833h1.51L7.47 10zm.725-5H9.24l.308-1H7.706l-.942 1h1.374l.085-.09-.028.09zm2.4-1l-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405zm-.378 6H12V8.02a1.499 1.499 0 0 1-.241.341L10.217 10zM12 6.646V6h-.646a1.5 1.5 0 0 1 .646.646z" />
+                            </svg> <span class="font-weight-light">%</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Group 1 -->
+                        <tr class="accordion-toggle collapsed" id="accordion1" data-toggle="collapse" data-parent="#accordion1"
+                          href="#collapseOne">
+                          <td >
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle-fill" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                            </svg>
+                          </td>
+                          <td>
+                            <h5 id="groupName1"> Group: Katoen natie - H2</h5>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container">
+                                <p class="ml-2 badge badge-danger text-wrap"> 72</p>
+                              </div>
+                            </div>
+                              
+                          </td>
+                          <td>
+                            <p id="groupName1_lum">425</p>
+                          </td>
+                          <td>
+                            <p id="groupName1_temp">19</p>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container-fluid">
+                                <p class="ml-2 badge badge-danger text-wrap mr-1">
+                                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-battery" fill="currentColor"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd"
+                                    d="M12 5H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" />
+                                  <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z" />
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                            
+                          </td>
+                  
+                        </tr>
+                        <!-- Sensor device 1 - Group_1-->
+                        <tr class="hide-table-padding" colspan="5">
+                          <td></td>
+                          
+                          <!-- Name Sensor device 1 -->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <button type="button" class="btn bg-transparent" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                  Sensor_Device_1
+                                </button>
+                              </div>    
+                          </td>
+                          <!-- Hum data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-2">  56</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Lum data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 425</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Temp data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 18.6</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Bat data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 10%" aria-valuenow="10"
+                                  aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                            
+                          </td>
+                        </tr>
+                        <!-- Sensor device 2  - Group_1 -->
+                        <tr class="hide-table-padding" colspan="5">
+                          <td></td>
+                        
+                          <!-- Name Sensor device 1 -->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <button type="button" class="btn bg-transparent" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                  Sensor_Device_2
+                                </button>
+                              </div>
+                          </td>
+                          <!-- Hum data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-2 badge badge-danger text-wrap"> 72</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Lum data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 425</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Temp data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 19.2</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Bat data-->
+                          <td>
+                            <div id="collapseOne" class="collapse in p-3">
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 60%" aria-valuenow="60"
+                                  aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                        
+                          </td>
+                        </tr>
+
+                        <!-- Group 2 -->
+                        <tr class="accordion-toggle collapsed" id="accordion2" data-toggle="collapse" data-parent="#accordion2"
+                          href="#collapseTwo">
+                          <td>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle-fill" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                            </svg>
+                          </td>
+                          <td>
+                            <h5 id="groupName2"> Group: Katoen natie - H6</h5>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container">
+                                <p class="ml-2 "> 55</p>
+                              </div>
+                            </div>
+                        
+                          </td>
+                          <td>
+                            <p id="groupName2_lum">405</p>
+                          </td>
+                          <td>
+                            <p id="groupName2_temp">18</p>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container-fluid">
+                                <p class="ml-2 ">
+                                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-battery-full" fill="lightblue"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                      d="M12 5H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" />
+                                    <path d="M2 6h10v4H2V6zm12.5 3.5a1.5 1.5 0 0 0 0-3v3z" />
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                        
+                          </td>
+                        
+                        </tr>
+                        <!-- Sensor device 3 - Group_2 -->
+                        <tr class="hide-table-padding" colspan="5">
+                          <td></td>
+                        
+                          <!-- Name Sensor device 1 -->
+                          <td>
+                            <div id="collapseTwo" class="collapse in p-3">
+                              <div class="row">
+                                <button type="button" class="btn bg-transparent" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                  Sensor_Device_3
+                                </button>
+                              </div>
+                          </td>
+                          <!-- Hum data-->
+                          <td>
+                            <div id="collapseTwo" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-2"> 55</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Lum data-->
+                          <td>
+                            <div id="collapseTwo" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 405</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Temp data-->
+                          <td>
+                            <div id="collapseTwo" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 18</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Bat data-->
+                          <td>
+                            <div id="collapseTwo" class="collapse in p-3">
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+                                  aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                        
+                          </td>
+                        </tr>
+
+                        
+                        <!-- Group 3 -->
+                        <tr class="accordion-toggle collapsed" id="accordion2" data-toggle="collapse" data-parent="#accordion2"
+                          href="#collapseThree">
+                          <td>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-circle-fill" fill="lightblue"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+                            </svg>
+                          </td>
+                          <td>
+                            <h5 id="groupName3"> Group: Katoen natie - H7</h5>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container">
+                                <p class="ml-2 "> 56</p>
+                              </div>
+                            </div>
+                        
+                          </td>
+                          <td>
+                            <p id="groupName3_lum">415</p>
+                          </td>
+                          <td>
+                            <p id="groupName3_temp">19</p>
+                          </td>
+                          <td>
+                            <div class="row">
+                              <div class="container-fluid">
+                                <p class="ml-2 ">
+                                  <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-battery-full" fill="lightblue"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                      d="M12 5H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zM2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" />
+                                    <path d="M2 6h10v4H2V6zm12.5 3.5a1.5 1.5 0 0 0 0-3v3z" />
+                                  </svg>
+                                </p>
+                              </div>
+                            </div>
+                        
+                          </td>
+                        
+                        </tr>
+                        <!-- Sensor device 4 - Group_3 -->
+                        <tr class="hide-table-padding" colspan="5">
+                          <td></td>
+                        
+                          <!-- Name Sensor device 1 -->
+                          <td>
+                            <div id="collapseThree" class="collapse in p-3">
+                              <div class="row">
+                                <button type="button" class="btn bg-transparent" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                  Sensor_Device_4
+                                </button>
+                              </div>
+                          </td>
+                          <!-- Hum data-->
+                          <td>
+                            <div id="collapseThree" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-2"> 56</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Lum data-->
+                          <td>
+                            <div id="collapseThree" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 415</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Temp data-->
+                          <td>
+                            <div id="collapseThree" class="collapse in p-3">
+                              <div class="row">
+                                <div class="container">
+                                  <p class="ml-1"> 19</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <!-- Bat data-->
+                          <td>
+                            <div id="collapseThree" class="collapse in p-3">
+                              <div class="progress">
+                                <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                  aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                        
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- Footer -->
+          <footer class="footer">
+            <div
+              class="d-sm-flex justify-content-center justify-content-sm-between"
+            >
+              <span
+                class="text-muted text-center text-sm-left d-block d-sm-inline-block"
+                >Copyright © 2020
+                <a
+                  href="https://www.uantwerpen.be/nl/studeren/aanbod/alle-opleidingen/productontwikkeling-studeren/"
+                  target="_blank"
+                  >MuMoDash - University of Antwerp </a
+                >. All rights reserved.</span
+              >
+              <span
+                class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
+                >Hand-crafted & made with
+                <i class="mdi mdi-heart text-danger"></i
+              ></span>
+            </div>
+          </footer>
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
