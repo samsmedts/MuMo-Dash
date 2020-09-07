@@ -1,17 +1,23 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+
   <ul class="nav">
     <!-- Profile link -->
     <li class="nav-item nav-profile">
       <a href="#" class="nav-link">
         <div class="nav-profile-image">
-          <img src="assets/images/logo/modemuseum.jpg" alt="profile" class="img-fluid img-thumbnail" />
+          <img
+            src="assets/images/logo/modemuseum.jpg"
+            alt="profile"
+            class="img-fluid img-thumbnail"
+          />
           <span class="login-status online"></span>
           <!--change to offline or busy as needed-->
         </div>
         <div class="nav-profile-text d-flex flex-column">
           <span class="font-weight-bold mb-2">ModeMuseum</span>
         </div>
-        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+        <i
+          class="mdi mdi-bookmark-check text-success nav-profile-badge"
+        ></i>
       </a>
     </li>
     <!-- Dashboard page link -->
@@ -23,21 +29,21 @@
     </li>
     <!-- Groups page link -->
     <li class="nav-item">
-      <a class="nav-link" href="pages/icons/mdi.html">
+      <a class="nav-link" href="pages/groups.html">
         <span class="menu-title">Groups</span>
         <i class="mdi mdi-checkbox-multiple-blank menu-icon"></i>
       </a>
     </li>
     <!-- Sensors page link -->
     <li class="nav-item">
-      <a class="nav-link" href="pages/forms/basic_elements.html">
+      <a class="nav-link" href="pages/sensors.html">
         <span class="menu-title">Sensors</span>
         <i class="mdi mdi-speedometer menu-icon"></i>
       </a>
     </li>
     <!-- Bugg page link -->
     <li class="nav-item">
-      <a class="nav-link" href="pages/charts/chartjs.html">
+      <a class="nav-link" href="pages/bugg_detection.html">
         <span class="menu-title">Bugg detection</span>
         <i class="menu-icon">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bug-fill" fill="currentColor"
@@ -65,22 +71,18 @@
         <ul class="nav flex-column sub-menu">
           <!-- Settings-Threshold page -->
           <li class="nav-item">
-            <a class="nav-link" href="pages/ui-features/buttons.html">Threshold</a>
+            <a class="nav-link" href="pages/settings_threshold.html">Threshold</a>
           </li>
           <!-- Settings-profile page -->
           <li class="nav-item">
-            <a class="nav-link" href="pages/ui-features/typography.html">Profile</a>
+            <a class="nav-link" href="pages/settings_profile.html">Profile</a>
           </li>
         </ul>
       </div>
     </li>
-
-    <li class="nav-item sidebar-actions">
-      <span class="nav-link">
-        <div class="border-bottom align-bottom">
-          <h6 class="font-weight-normal text-left">Actions</h6>
-        </div>
-      </span>
+    
+    <li class="nav-item sidebar-actions nav-link">
+          <h6 class="border-bottom align-bottom font-weight-normal text-left">Actions</h6>
     </li>
     <!-- Quick action buttons -->
     <li class="nav-item sidebar-actions">
@@ -88,5 +90,6 @@
         <button class="btn btn-block btn-auto btn-gradient-info  ">
           + Add Sensor device
         </button>
+      </span>
+    </li>
   </ul>
-</nav>
